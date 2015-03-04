@@ -23,6 +23,10 @@ public abstract class Kort {
 		return (fornavn + " " + etternavn);
 	}
 	
+	public int getPin(){
+		return pinKode;
+	}
+	
 	public boolean isSperret(){
 		return sperretKort;
 	}
@@ -31,5 +35,9 @@ public abstract class Kort {
 	
 	public String toString(){
 		return (fornavn + " " + etternavn + " " + kortnummer + " " + pinKode + " " + (sperretKort == false ? "Gyldig" : "Ugyldig"));
+	}
+
+	public void setSperretKort(boolean b) {
+		sperretKort = b;	
 	}
 }
