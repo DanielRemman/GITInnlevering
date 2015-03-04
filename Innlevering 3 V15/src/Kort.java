@@ -11,6 +11,7 @@ public abstract class Kort {
 	private boolean sperretKort;
 	private static int antallKort;
 	
+	
 	public Kort(String fornavn,String etternavn,int pinKode){
 	this.fornavn = fornavn;
 	this.etternavn = etternavn;
@@ -39,5 +40,49 @@ public abstract class Kort {
 
 	public void setSperretKort(boolean b) {
 		sperretKort = b;	
+	}
+	
+	public String getFornavn() {
+		return fornavn;
+	}
+
+	public void setFornavn(String fornavn) {
+		this.fornavn = fornavn;
+	}
+
+	public String getEtternavn() {
+		return etternavn;
+	}
+
+	public void setEtternavn(String etternavn) {
+		this.etternavn = etternavn;
+	}
+
+	public int getPinKode() {
+		return pinKode;
+	}
+
+	public void setPinKode(int pinKode) {
+		this.pinKode = pinKode;
+	}
+
+	public int getKortnummer() {
+		return kortnummer;
+	}
+
+	public void setKortnummer(int kortnummer) {
+		this.kortnummer = kortnummer;
+	}
+
+	public static int getAntallKort() {
+		return antallKort;
+	}
+
+	public static void setAntallKort(int antallKort) {
+		Kort.antallKort = antallKort;
+	}
+
+	public boolean isSperretKort() {
+		return sperretKort;
 	}
 }

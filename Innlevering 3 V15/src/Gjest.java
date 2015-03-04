@@ -1,11 +1,11 @@
-import java.util.GregorianCalendar;
-
 /*
  * Kort, Oppgave 1 Innlevering 3
  * Gjest
  * 
  * Daniel Remman, 540388
  */
+
+import java.util.GregorianCalendar;
 
 public class Gjest extends Kort {
 
