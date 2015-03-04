@@ -4,7 +4,7 @@
  * Daniel Remman, 540388
  */
 
-public abstract class Kort {
+public abstract class Kort implements Comparable<Kort>,Cloneable{
 
 	private String fornavn, etternavn;
 	private int pinKode, kortnummer;
@@ -84,5 +84,32 @@ public abstract class Kort {
 
 	public boolean isSperretKort() {
 		return sperretKort;
+	}
+
+	@Override
+	public int compareTo(Kort k) {
+		if (k == null)
+			return -1;
+		else if (this.getEtternavn().compareTo(k.getEtternavn()) < 0)
+			return -1;
+		else if (this.getEtternavn().compareTo(k.getEtternavn()) > 0)
+			return 1;
+		else if (this.getFornavn().compareTo(k.getFornavn()) < 0)
+			return -1;
+		else if (this.getFornavn().compareTo(k.getFornavn()) > 0)
+			return 1;
+		else
+			return 0;
+	}
+	
+	public Object clone() {
+		try {
+			Kort clone = (Kort) super.clone();
+			clone.setFornavn(new String(this.getFornavn()));
+			clone.setEtternavn(new String(this.getEtternavn()));
+			return clone;
+		} catch (Exception e) {
+			return null;
+		}
 	}
 }

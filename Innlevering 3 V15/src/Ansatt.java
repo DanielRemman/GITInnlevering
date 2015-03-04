@@ -13,7 +13,7 @@ public class Ansatt extends Kort implements Fast {
 
 	private int åretAnsatt;
 
-	public Ansatt(String fornavn, String etternavn, int pinKode, int timelønn,
+	public Ansatt(String fornavn, String etternavn, int pinKode, double timelønn,
 			GregorianCalendar åretAnsatt) {
 		super(fornavn, etternavn, pinKode);
 		this.timelønn = timelønn;

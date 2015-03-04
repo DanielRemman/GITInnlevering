@@ -14,7 +14,7 @@ public class KortTest {
     	
         ArrayList<Kort> reg = new ArrayList<Kort>();
         
-        Kort k1 = new Ansatt("Ole", "Olsen", 1234, 5846, new GregorianCalendar(2005, 1, 1));
+        Kort k1 = new Ansatt("Ole", "Olsen", 1234, 23948.896, new GregorianCalendar(2005, 1, 1));
         Kort k2 = new Gjest("Marit", "Olsen");
         
         reg.add(k1);
@@ -31,5 +31,12 @@ public class KortTest {
         Ansatt a1 = (Ansatt)k1;
         System.out.println("Kreditt for " + k1.getNavn() + ": " + a1.beregnKreditt());
         System.out.println("Bonus for " + k1.getNavn() + ": " + a1.beregnBonus());
+        
+        Ansatt a2 = (Ansatt) a1.clone();
+        System.out.println("Samme referanse? " + (a1 == a2));
+        System.out.println("Er de like? " + (a1.compareTo(a2) == 0 ? "Ja": "Nei"));
+        
+        a2.setFulltNavn("Daniel Remman");
+        System.out.println(a2);
     }
 }

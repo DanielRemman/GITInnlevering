@@ -31,4 +31,11 @@ public class Gjest extends Kort {
 			return false;
 	}
 	
+	@Override
+	public Object clone(){
+		Gjest clone = (Gjest) super.clone();
+		clone.utløpsdato = (GregorianCalendar) this.utløpsdato.clone();
+		
+		return clone;
+	}
 }
