@@ -4,39 +4,32 @@
  * Daniel Remman, 540388
  */
 
-public class Kort {
+public abstract class Kort {
 
-	String fornavn;
-	String etternavn;
-	int pinKode;
-	static int kortnummer;
-	static boolean aksess;
-	static int antallKort;
+	private String fornavn, etternavn;
+	private int pinKode, kortnummer;
+	private boolean sperretKort;
+	private static int antallKort;
 	
 	public Kort(String fornavn,String etternavn,int pinKode){
 	this.fornavn = fornavn;
 	this.etternavn = etternavn;
 	this.pinKode = pinKode;
-	aksess = false;
-	if (antallKort == 0)
-		antallKort = 1;
-	kortnummer = antallKort;
-	antallKort++;
+	sperretKort = false;
+	kortnummer = ++antallKort;
 	}
 	
 	public String getNavn(){
 		return (fornavn + " " + etternavn);
 	}
 	
-	public static boolean isSperret(){
-		return (aksess == false ? false : true);
+	public boolean isSperret(){
+		return sperretKort;
 	}
 	
-	public boolean sjekkPIN(int pin){
-		return (pinKode == pin ? true : false);
-	}
+	public abstract boolean sjekkPIN(int pin);
 	
 	public String toString(){
-		return (fornavn + " " + etternavn + " " + kortnummer + " " + (aksess == false ? "Gyldig" : "Ugyldig"));
+		return (fornavn + " " + etternavn + " " + kortnummer + " " + pinKode + " " + (sperretKort == false ? "Gyldig" : "Ugyldig"));
 	}
 }
