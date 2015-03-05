@@ -1,5 +1,5 @@
 /*
- * Kort, Oppgave 1 Innlevering 3
+ * Kort, Oppgave 2 Innlevering 3
  * Fast
  * 
  * Daniel Remman, 540388

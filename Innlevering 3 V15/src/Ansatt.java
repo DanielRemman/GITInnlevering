@@ -1,5 +1,5 @@
 /*
- * Kort, Oppgave 1 Innlevering 3
+ * Kort, Oppgave 1 & 2 Innlevering 3
  * Ansatt
  * 
  * Daniel Remman, 540388

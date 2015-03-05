@@ -1,3 +1,9 @@
+/*
+ * TowerOfHanoi, Oppgave 3 Innlevering 3
+ * 
+ * Daniel Remman, 540388
+ */
+
 import java.util.Scanner;
 
 public class TowerOfHanoi {
